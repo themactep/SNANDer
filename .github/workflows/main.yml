@@ -53,14 +53,7 @@ jobs:
           cp -rf ./build/x86 ./artifact/
           cp -rf ./build/x64 ./artifact/
 
-      # step5: Deliver Package
-      - name: Deliver Package
-        uses: actions/upload-artifact@v2
-        with:
-          name: SNANDer
-          path: ./artifact/
-
-      # step6: Publish Release
+      # step5: Publish Release
       - name: Publish Release
         uses: svenstaro/upload-release-action@v2
         with:
